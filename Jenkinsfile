@@ -4,7 +4,7 @@ pipeline{
 		stage("Pull Latest Image"){
 			steps{
 			    //sh
-				bat "docker pull vinsdocker/selenium-docker"
+				bat "docker pull deepkandey/selenium-docker"
 			}
 		}
 		stage("Start Grid"){
@@ -24,7 +24,8 @@ pipeline{
 		always{
 			archiveArtifacts artifacts: 'output/**'
 			bat "docker-compose down"
-			bat "sudo rm -rf output/"
+		//	bat "sudo rm -rf output/"
+		    bat "del /f output"
 		}
 	}
 }
