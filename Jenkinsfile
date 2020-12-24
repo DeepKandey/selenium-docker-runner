@@ -16,7 +16,7 @@ pipeline{
 		stage("Run Test"){
 			steps{
 			    //sh
-				bat "docker-compose up search-module-firefox book-flight-module-chrome"
+				bat "docker-compose up search-module book-flight-module"
 			}
 		}
 	}
