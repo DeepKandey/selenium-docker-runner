@@ -6,6 +6,7 @@ services:
       - "4444:4444"
   chrome:
     image: selenium/node-chrome:3.141.59
+    shm_size: '1gb'
     depends_on:
       - hub
     environment:
