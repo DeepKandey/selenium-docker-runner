@@ -28,7 +28,7 @@ services:
       - HUB_HOST=hub
       - MODULE=search-module.xml
     volumes:
-      - ./search-module-result:/usr/share/udemy/test-output
+      - ./output/search-module-result:/usr/share/udemy/test-output
   book-flight-module:
     image: deepkandey/selenium-docker:latest
     depends_on:
@@ -39,4 +39,4 @@ services:
       - HUB_HOST=hub
       - MODULE=book-flight-module.xml
     volumes:
-      - ./book-flight-module-result:/usr/share/udemy/test-output
+      - ./output/book-flight-module-result:/usr/share/udemy/test-output
