@@ -25,7 +25,7 @@ pipeline{
 			archiveArtifacts artifacts: 'output/**'
 			bat "docker-compose down"
 		//	bat "sudo rm -rf output/"
-		    bat "del /f output"
+		    bat "rmdir /S /Q output"
 		}
 	}
 }
