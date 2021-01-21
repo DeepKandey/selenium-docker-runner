@@ -19,7 +19,7 @@ pipeline{
 			steps{
 			    //sh
 				//bat "docker-compose up search-module book-flight-module"
-				bat "docker-compose up search-module book-flight-module"
+				sh "docker-compose up search-module book-flight-module"
 			}
 		}
 	}
